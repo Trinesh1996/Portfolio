@@ -24,9 +24,9 @@ app.use(express.static('public'));
 app.use(cors());
 app.use(flash());
 
-app.get('/', (req, res) => {
+app.post('/welcome', (req, res) => {
     res.json( {
-        message: "Welcome to my Portfolio"
+        message: `welcome ${req.body.test} your name is connecting the client to server`
     })
 })
 
